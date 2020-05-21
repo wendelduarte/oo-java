@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import entities.Product;
 
@@ -16,7 +17,8 @@ public class Program {
 	private static final String PATH = "PUT YOUR PATH HERE";
 	
 	public static void main(String[] args) {
-
+		
+		Locale.setDefault(Locale.US);
 		try(BufferedReader br = new BufferedReader(new FileReader(PATH + "source.csv"))){
 			
 			List<Product> allContent = new ArrayList<Product>();
